@@ -95,14 +95,34 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      F["Sua resposta aqui!"]
-   ```
+      A[Início] --> B{Digite N1}
+    B --> C{Digite N2}
+    C --> D{Digite N3}
+    D --> E{N1 > N2?}
+    E -- Sim --> F{N1 > N3?}
+    F -- Sim --> G[N1 é o maior]
+    F -- Não --> H[N3 é o maior]
+    E -- Não --> I{N2 > N3?}
+    I -- Sim --> J[N2 é o maior]
+    I -- Não --> H
+    G --> K[Fim]
+    H --> K
+    J --> K
    
 8. Construa um fluxograma para calcular o fatorial de um número fornecido pelo usuário.
    
    ```mermaid
    flowchart TD
-      G["Sua resposta aqui!"]
+       A((Início)) --> B[\Digite um número inteiro \]
+    B --> C[r=1]
+    C --> D{n>1?}
+    D -- SIM --> E[r=r*n]
+    E --> F[n=n-1]
+    F --> D
+    D -- NÃO --> G[/Resposta = R/] 
+    G --> H([ Fim ])
+    
+   
    ```
    
 9. Elabore um fluxograma para verificar se um número digitado pelo usuário é par.
@@ -115,12 +135,23 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      H["Sua resposta aqui!"]
+      A((Inicio)) --> B[\Digite um numero\]
+      B --> C{N%2==0?}
+      C -- SIM --> D[/O numero é par/]
+      C -- NÃO --> E[/O numero é impar/]
+      D --> F([ Fim ])
+      E --> F([ Fim ])
+   
    ```
    
 10. Elabore um fluxograma para verificar se um número digitado pelo usuário é primo.
    
    ```mermaid
-   flowchart TD
-      I["Sua resposta aqui!"]
+    flowchart TD
+      A((Inicio)) --> B[\Digite um numero\]
+      B --> C{N%2==0?}
+      C -- SIM --> D[/O numero é par/]
+      C -- NÃO --> E[/O numero é impar/]
+      D --> F([ Fim ])
+      E --> F([ Fim ])
    ```
